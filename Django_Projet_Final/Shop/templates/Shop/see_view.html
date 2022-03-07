@@ -1,0 +1,20 @@
+
+<div class="main">
+
+    <h1>Produits</h1>
+ 
+    {% for data in dataset %}
+    <a href="/Shop/{{ data.id }}">
+        <button>
+            <div class="ProductGrid">
+                <img src="http://www.ipsgroup.fr/wp-content/uploads/2013/12/default_image_01-1024x1024-570x321.png"/><br/>
+                <b>Nom :</b> {{ data.Product_Name }}<br/>
+                <b>Description :</b> {{ data.Product_Description }}<br/>
+                <b>Stock :</b> {{ data.Product_Stock }}<br/>
+                <b>Prix :</b> {{ data.Product_Price }} €<br/>
+            </div>
+        </button>
+    </a>
+    {% endfor %}<br>
+    <a href="/Shop/create/"><button>Add an item</button></a>
+</div>

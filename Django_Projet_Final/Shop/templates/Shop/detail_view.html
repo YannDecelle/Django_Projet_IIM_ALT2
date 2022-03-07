@@ -1,0 +1,18 @@
+<div class="main">
+    <div class="ProductGrid">
+        <img src="http://www.ipsgroup.fr/wp-content/uploads/2013/12/default_image_01-1024x1024-570x321.png"/><br/>
+        <b>Nom :</b> {{ data.Product_Name }}<br/>
+        <b>Description :</b> {{ data.Product_Description }}<br/>
+        <b>Stock :</b> {{ data.Product_Stock }}<br/>
+        <b>Prix :</b> {{ data.Product_Price }} €<br/>
+        <form method="POST">
+            <!-- Security token by Django -->
+            {% csrf_token %}
+     
+            <!-- form as paragraph -->
+            {{ form.as_p }}
+            <input type="submit" value="Acheter">
+        </form>
+    </div>
+ 
+</div>
